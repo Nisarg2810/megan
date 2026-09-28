@@ -12,7 +12,7 @@
   <link rel="icon" href="avatar.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@1,600&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;1,500;1,600&family=Cinzel:wght@500;700&family=Caveat:wght@500;700&family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
     :root {
       /* Foundation plan palette (indigo → violet, ink) + a romantasy night: midnight, starlight gold */
@@ -862,6 +862,73 @@
     .hero h1 .hl { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-weight: 600; letter-spacing: -0.01em; background: linear-gradient(90deg, #3B4FE0, #7C3AED 60%, #d9788f); -webkit-background-clip: text; background-clip: text; color: transparent; font-size: 1.12em; }
     .bar .to img { height: 16px; vertical-align: -2px; }
     .post figure img { object-fit: cover; }
+
+    /* ---- A Court of Tasks & Time Off ---- */
+    body { background: radial-gradient(120% 70% at 50% 0%, #2a2466 0%, #140f33 45%, #09071a 100%) fixed; color: #ece8ff; }
+    #ncSky { position: fixed; inset: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none; }
+    .levelbar, .workspace-intro, .world-tag, .bricks, #note > .world-head, .hero-stage { display: none !important; }
+    .nc-hero { position: relative; min-height: min(760px, 96vh); display: grid; place-items: center; text-align: center; overflow: hidden; padding: 60px 0 170px; }
+    .nc-mtn { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 300px; }
+    .nc-lights rect { animation: ncFlick 3s ease-in-out infinite; } .nc-lights rect:nth-child(3n) { animation-delay: -1s; } .nc-lights rect:nth-child(3n+1) { animation-delay: -2s; }
+    @keyframes ncFlick { 50% { opacity: .35; } }
+    .nc-inner { position: relative; z-index: 1; }
+    .nc-kicker { display: inline-flex; align-items: center; gap: 14px; font: 500 12px "Cinzel", serif; letter-spacing: .28em; text-transform: uppercase; color: #cfc6f2; animation: ncUp 1.2s .1s both; }
+    .nc-kicker i { width: 38px; height: 1px; background: linear-gradient(90deg, transparent, #e8c26a, transparent); }
+    .nc-kicker img { height: 13px; opacity: .9; }
+    .nc-title { margin-top: 26px; font: 500 clamp(40px, 6.6vw, 86px)/1.02 "Cinzel", serif; letter-spacing: .04em; text-transform: uppercase;
+      background: linear-gradient(180deg, #fff6dc 0%, #f7d98a 45%, #c9953b 100%); -webkit-background-clip: text; background-clip: text; color: transparent;
+      filter: drop-shadow(0 0 24px rgba(247,217,138,.28)); animation: ncUp 1.4s .25s both; }
+    .nc-title span { display: block; font: italic 500 clamp(34px, 5.4vw, 70px)/1.1 "Cormorant Garamond", serif; text-transform: none; letter-spacing: .01em; margin-top: 4px; }
+    .nc-orn { display: block; width: min(320px, 70vw); margin: 22px auto 0; color: #e8c26a; animation: ncDraw 2s .9s both; stroke-dasharray: 700; }
+    .nc-orn g { stroke-dasharray: 700; stroke-dashoffset: 700; animation: ncStroke 2.2s .9s forwards; }
+    @keyframes ncStroke { to { stroke-dashoffset: 0; } }
+    @keyframes ncDraw { from { opacity: 0; } }
+    .nc-sub { margin-top: 20px; font: italic 500 clamp(19px, 2.2vw, 24px) "Cormorant Garamond", serif; color: #d9d2f5; animation: ncUp 1.2s 1.2s both; }
+    .nc-cta { margin-top: 30px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; animation: ncUp 1.2s 1.5s both; }
+    .nc-btn { font: 700 12px "Cinzel", serif; letter-spacing: .16em; text-transform: uppercase; text-decoration: none; color: #1a1236; background: linear-gradient(180deg, #f7d98a, #d9a94a); padding: 14px 22px; border-radius: 999px; box-shadow: 0 0 0 1px rgba(255,246,220,.5) inset, 0 10px 30px -8px rgba(247,217,138,.55); transition: transform .2s, box-shadow .2s; }
+    .nc-btn:hover { transform: translateY(-2px); box-shadow: 0 0 0 1px rgba(255,246,220,.7) inset, 0 16px 36px -8px rgba(247,217,138,.7); }
+    .nc-btn.ghost { background: rgba(255,255,255,.04); color: #f7d98a; box-shadow: 0 0 0 1px rgba(232,194,106,.55) inset; }
+    @keyframes ncUp { from { opacity: 0; transform: translateY(18px); filter: blur(4px); } }
+    .game { background: transparent !important; }
+    .world-head h2 { color: #f3e9d2; font: 500 clamp(30px, 4vw, 46px) "Cinzel", serif !important; letter-spacing: .03em; text-align: center; }
+    .world-head { margin-left: auto; margin-right: auto; text-align: center; }
+    .world-head::after { content: ""; display: block; width: 220px; height: 18px; margin: 14px auto 0; background: center / contain no-repeat url("data:image/svg+xml,%3Csvg class='nc-orn' viewBox='0 0 320 24' aria-hidden='true'%3E%3Cg fill='none' stroke='%23e8c26a' stroke-width='1.2'%3E%3Cpath d='M0 12 H122'/%3E%3Cpath d='M198 12 H320'/%3E%3Cpath d='M122 12 C132 2 142 2 150 12 C142 22 132 22 122 12Z'/%3E%3Cpath d='M198 12 C188 2 178 2 170 12 C178 22 188 22 198 12Z'/%3E%3Cpath d='M160 2 L166 12 L160 22 L154 12Z' fill='%23e8c26a'/%3E%3Ccircle cx='104' cy='12' r='2' fill='%23e8c26a'/%3E%3Ccircle cx='216' cy='12' r='2' fill='%23e8c26a'/%3E%3C/g%3E%3C/svg%3E"); }
+    .contact h2 { color: #f3e9d2; font: 500 clamp(32px, 4.4vw, 52px) "Cinzel", serif !important; letter-spacing: .04em; } .contact p { color: #d9d2f5; font: italic 500 22px "Cormorant Garamond", serif; }
+    .contact .btn { font: 700 12px "Cinzel", serif !important; letter-spacing: .14em; text-transform: uppercase; color: #1a1236 !important; background: linear-gradient(180deg, #f7d98a, #d9a94a) !important; border: 0 !important; border-radius: 999px !important; box-shadow: 0 10px 30px -8px rgba(247,217,138,.55) !important; padding: 14px 22px !important; }
+    .contact .btn.ghost { background: rgba(255,255,255,.04) !important; color: #f7d98a !important; box-shadow: 0 0 0 1px rgba(232,194,106,.55) inset !important; }
+    .game h2 { font: 500 clamp(28px, 3.6vw, 42px) "Cinzel", serif !important; letter-spacing: .03em; color: #f3e9d2; }
+    .game .eyebrow { color: #e8c26a; }
+    footer { background: transparent !important; color: #8f89b0 !important; border-color: rgba(255,255,255,.08) !important; }
+    footer span { color: #8f89b0 !important; }
+
+    /* the note */
+    #note { padding-top: 40px; }
+    .nt-wrap { display: grid; place-items: center; padding: 20px 0 40px; perspective: 1800px; }
+    .nt-paper { position: relative; width: min(680px, 94vw); padding: clamp(34px, 6vw, 64px) clamp(26px, 6vw, 70px) clamp(60px, 8vw, 80px); color: #2a2250;
+      background: radial-gradient(130% 90% at 50% 10%, #fbf6ea 0%, #f3e9d2 60%, #e7d7b4 100%);
+      border-radius: 6px; box-shadow: 0 1px 0 #fff inset, 0 40px 90px -30px rgba(0,0,0,.8), 0 0 60px -10px rgba(247,217,138,.25);
+      transform-origin: 50% 0; transform: rotateX(-88deg) scaleY(.6); opacity: 0; transition: transform 1.4s cubic-bezier(.2,.8,.2,1), opacity .6s; }
+    .nt-paper::before { content: ""; position: absolute; inset: 12px; border: 1px solid rgba(201,149,59,.55); border-radius: 3px; pointer-events: none; }
+    .nt-paper::after { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(0deg, transparent 0 3px, rgba(120,90,40,.025) 3px 4px); pointer-events: none; border-radius: 6px; }
+    .reveal.in .nt-paper, .show-all .nt-paper { transform: none; opacity: 1; }
+    .nt-c { position: absolute; width: 38px; height: 38px; border: 2px solid #c9953b; opacity: .8; }
+    .nt-c.tl { top: 18px; left: 18px; border-right: 0; border-bottom: 0; border-top-left-radius: 14px; }
+    .nt-c.tr { top: 18px; right: 18px; border-left: 0; border-bottom: 0; border-top-right-radius: 14px; }
+    .nt-c.bl { bottom: 18px; left: 18px; border-right: 0; border-top: 0; border-bottom-left-radius: 14px; }
+    .nt-c.br { bottom: 18px; right: 18px; border-left: 0; border-top: 0; border-bottom-right-radius: 14px; }
+    .nt-head { text-align: center; font: 700 11px "Cinzel", serif; letter-spacing: .3em; text-transform: uppercase; color: #a57a2c; margin-bottom: 18px; }
+    .nt-paper p { font: 500 clamp(22px, 2.6vw, 27px)/1.38 "Caveat", cursive; margin-top: 12px; }
+    .nt-hi { font-size: clamp(28px, 3.2vw, 34px) !important; margin-top: 0 !important; }
+    .nt-sign { font: 700 clamp(34px, 4vw, 44px)/1 "Caveat", cursive !important; text-align: right; margin-top: 22px !important; color: #3a2a7a; }
+    .nt-sign::before { content: "— "; }
+    .nt-ps { font-size: clamp(19px, 2.2vw, 22px) !important; color: #6b5a8f; margin-top: 18px !important; }
+    .nt-ink { clip-path: inset(0 100% 0 0); transition: clip-path 1.6s cubic-bezier(.45,.05,.3,1); transition-delay: calc(1s + var(--d) * .75s); }
+    .reveal.in .nt-ink, .show-all .nt-ink { clip-path: inset(0 0 0 0); }
+    .nt-seal { position: absolute; left: 50%; bottom: -30px; width: 66px; height: 66px; margin-left: -33px; border-radius: 50%; display: grid; place-items: center;
+      font: 700 28px "Cinzel", serif; color: #f7d98a; background: radial-gradient(circle at 35% 30%, #9c2f4c, #6b1f35 60%, #4a1224);
+      box-shadow: 0 0 0 4px rgba(107,31,53,.55), 0 10px 20px rgba(0,0,0,.45), inset 0 -4px 8px rgba(0,0,0,.35); transform: scale(0) rotate(-40deg); transition: transform .6s cubic-bezier(.3,1.6,.5,1); transition-delay: 6.2s; }
+    .reveal.in .nt-seal, .show-all .nt-seal { transform: scale(1) rotate(-8deg); }
+    @media (prefers-reduced-motion: reduce) { .nt-paper, .nt-ink, .nt-seal { transition: none !important; } .nc-kicker, .nc-title, .nc-sub, .nc-cta, .nc-orn, .nc-orn g { animation: none !important; stroke-dashoffset: 0; } }
   </style>
 </head>
 <body>
@@ -882,43 +949,21 @@
     <div class="lb-right" id="lbWorld">WORLD 1-1</div>
   </nav>
 
-  <header class="wrap bar">
-    <strong>Nisarg Mehta</strong>
-    <span class="to">For Megan · <img src="logo-dark.svg" alt="Foundation"></span>
-  </header>
-
-  <!-- Your post -->
-  <section class="hero wrap">
-    <div class="eyebrow">Hi Megan 👋 📚</div>
-    <h1>I Could Tell You. <span class="hl">Or I Could Show You.</span></h1>
-    <div class="hero-stage"><canvas id="heroStage" width="240" height="80" role="img" aria-label="Pixel scene: you toss books at a target while I jump to hit question blocks that pop out posts, threads, shorts and more, then we high-five."></canvas></div>
-
-    <article class="post" aria-label="Your week-one post">
-      <figure>
-        <img src="megan.jpg" alt="Megan smiling in her glasses" width="800" height="800">
-        <figcaption>OCT 27 · PTO REQUESTED</figcaption>
-      </figure>
-      <div class="post-body">
-        <div class="who">
-          <img src="megan.jpg" alt="">
-          <div>
-            <div class="name">Megan</div>
-            <div class="role">Marketing Director · Foundation</div>
-          </div>
-          <span class="tag">Your post</span>
-        </div>
-        <div class="caption">
-          <p class="big">Anyone submit their PTO for October 27th yet? 😍</p>
-          <p>I know I can’t be the only Romantasy loving Digital Marketing girlie on here!</p>
-          <p>Who is pumped for the new ACOTAR books!! Drop me a 💞 and tell me which SJM book/series is your favorite.</p>
-          <p><em>And your plan: a staycation to bury yourself in the newest SJM book, and cry. So go read. Player 2 has the rest. 📚</em></p>
-        </div>
-        <div class="post-foot">
-          <a class="btn" href="#play">▶ Replay the game</a>
-          <a class="btn ghost" href="#workspace">Open the workspace ↓</a>
-        </div>
-      </div>
-    </article>
+  <!-- Hero: a night-court sky -->
+  <section class="nc-hero" id="top">
+    <svg class="nc-mtn" viewBox="0 0 1440 300" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="ncM1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a3f94"/><stop offset="1" stop-color="#231c52"/></linearGradient></defs>
+      <path d="M0 300 V190 L90 150 L170 175 L290 80 L380 150 L470 118 L590 190 L720 95 L820 160 L930 72 L1050 170 L1170 118 L1290 165 L1380 110 L1440 130 V300Z" fill="url(#ncM1)"/>
+      <path d="M290 80 L305 100 L292 96 L280 104Z M720 95 L736 116 L722 111 L708 118Z M930 72 L947 95 L932 90 L918 98Z" fill="#e6e0ff" opacity=".8"/>
+      <path d="M0 300 V235 L150 188 L280 232 L410 180 L560 236 L700 196 L850 240 L1000 190 L1150 236 L1300 200 L1440 228 V300Z" fill="#140f30"/>
+      <g class="nc-lights" fill="#f7d98a"><rect x="612" y="262" width="3" height="3" rx="1"/><rect x="640" y="270" width="3" height="3" rx="1"/><rect x="668" y="258" width="3" height="3" rx="1"/><rect x="700" y="272" width="3" height="3" rx="1"/><rect x="731" y="264" width="3" height="3" rx="1"/><rect x="760" y="275" width="3" height="3" rx="1"/><rect x="790" y="262" width="3" height="3" rx="1"/><rect x="820" y="270" width="3" height="3" rx="1"/><rect x="655" y="282" width="3" height="3" rx="1"/><rect x="710" y="284" width="3" height="3" rx="1"/><rect x="772" y="286" width="3" height="3" rx="1"/><rect x="845" y="280" width="3" height="3" rx="1"/><rect x="598" y="280" width="3" height="3" rx="1"/><rect x="880" y="268" width="3" height="3" rx="1"/></g>
+    </svg>
+    <div class="nc-inner wrap">
+      <div class="nc-kicker"><span>For Megan</span><i></i><img src="logo-light.svg" alt="Foundation"><i></i><span>from Nisarg</span></div>
+      <h1 class="nc-title">A Court of<span>Tasks &amp; Time Off</span></h1>
+      <svg class="nc-orn" viewBox="0 0 320 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.2"><path d="M0 12 H122"/><path d="M198 12 H320"/><path d="M122 12 C132 2 142 2 150 12 C142 22 132 22 122 12Z"/><path d="M198 12 C188 2 178 2 170 12 C178 22 188 22 198 12Z"/><path d="M160 2 L166 12 L160 22 L154 12Z" fill="currentColor"/><circle cx="104" cy="12" r="2" fill="currentColor"/><circle cx="216" cy="12" r="2" fill="currentColor"/></g></svg>
+      <p class="nc-sub">You’ve seen the plan. This one’s just for fun, with a note at the end.</p>
+      <div class="nc-cta"><a class="nc-btn" href="#play">▶ Play the story</a><a class="nc-btn ghost" href="#note">✉ Read the note</a></div>
+    </div>
   </section>
 
   <!-- The game -->
@@ -1988,7 +2033,18 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
     </div></div>`;
   }
-  const R = { _row, _col, exec_track, personas, player_card, linkedin, instagram, instagram_carousel, blog, case_study, email, landing_page, campaign_timeline, video, approach, strategy, ideas, hubspot_workflow, hubspot_scoring, hubspot_dashboard, hubspot_setup, about, contact };
+  function note(it) {
+    return `<div class="nt-wrap"><article class="nt-paper" aria-label="A handwritten note">
+      <span class="nt-c tl"></span><span class="nt-c tr"></span><span class="nt-c bl"></span><span class="nt-c br"></span>
+      <div class="nt-head">${esc(it.head || '')}</div>
+      <p class="nt-hi nt-ink" style="--d:0">${esc(it.hi)}</p>
+      ${it.lines.map((l, i) => `<p class="nt-ink" style="--d:${i + 1}">${esc(l)}</p>`).join('')}
+      <p class="nt-sign nt-ink" style="--d:${it.lines.length + 1}">${esc(it.sign)}</p>
+      <p class="nt-ps nt-ink" style="--d:${it.lines.length + 2}">${esc(it.ps || '')}</p>
+      <span class="nt-seal" aria-hidden="true">N</span>
+    </article></div>`;
+  }
+  const R = { _row, _col, exec_track, personas, player_card, note, linkedin, instagram, instagram_carousel, blog, case_study, email, landing_page, campaign_timeline, video, approach, strategy, ideas, hubspot_workflow, hubspot_scoring, hubspot_dashboard, hubspot_setup, about, contact };
   const WRAPPED = new Set(['linkedin', 'instagram', 'instagram_carousel', 'email', 'landing_page']);
   function renderItem(it, ctx) {
     const fn = R[it.type];
@@ -2762,69 +2818,25 @@ document.addEventListener('DOMContentLoaded', () => {
  },
  "sections": [
   {
-   "id": "player-2",
-   "short": "Player 2",
-   "title": "Character card",
-   "intro": "Tap it. It flips.",
+   "id": "note",
+   "short": "A note",
+   "title": "A note",
+   "intro": "",
    "layout": "stack",
    "items": [
     {
-     "type": "player_card",
-     "author": "nisarg",
-     "photo": "nisarg.jpg",
-     "rarity": "ONE OF ONE",
-     "level": "99",
-     "class": "The Outlier · intentionally curious",
-     "stats": [
-      {
-       "k": "OWNERSHIP",
-       "v": 99
-      },
-      {
-       "k": "HIGH AGENCY",
-       "v": 99
-      },
-      {
-       "k": "ENTREPRENEURIAL",
-       "v": 99
-      },
-      {
-       "k": "SMARTS",
-       "v": 99
-      },
-      {
-       "k": "MISSION FIT",
-       "v": 100
-      },
-      {
-       "k": "GETS IT DONE",
-       "v": 100
-      },
-      {
-       "k": "CURIOSITY",
-       "v": 99
-      },
-      {
-       "k": "VALUE",
-       "v": 200,
-       "show": "20×"
-      }
+     "type": "note",
+     "head": "Before our meeting",
+     "hi": "Megan,",
+     "lines": [
+      "You’ve already seen the plan, so no slides this time. Just a note.",
+      "Here’s who I want to be at Foundation: the outlier. The one who picks up a significant share of the load, and keeps it.",
+      "I’ll bring 20× the value, with an owner’s mindset: entrepreneurial, high agency, mission-aligned, and allergic to “not my job.”",
+      "My loop is simple: learn, execute, iterate, as fast as anyone out there. Intentional curiosity keeps it smart. Getting it done keeps it real.",
+      "And when October 27 comes, take the whole week. Read the book, cry at the ending. I’ve got the rest."
      ],
-     "moves": [
-      {
-       "n": "Learn → Execute → Iterate",
-       "d": "The fastest loop out there. Cooldown: none."
-      },
-      {
-       "n": "Heavy Lifter",
-       "d": "Passive. Picks up a significant share of the load, and keeps it."
-      },
-      {
-       "n": "Owner's Mindset",
-       "d": "One goal down, one minute left? Only asks what it takes to score."
-      }
-     ],
-     "lore": "First quest: the Foundation plan. The founder and the whole team loved it. The next one starts today."
+     "sign": "Nisarg",
+     "ps": "P.S. Tell me your favourite SJM series today. Purely for research."
     }
    ]
   },
@@ -2837,7 +2849,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
      "type": "contact",
      "headline": "See You Today.",
-     "text": "Recruit me to your party. I'll bring the 20×.",
+     "text": "Can’t wait to talk. I’ll bring the 20×.",
      "buttons": [
       {
        "label": "📘 The Foundation plan",
@@ -2853,14 +2865,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }
  ],
  "cameos": {
-  "player-2": [
+  "note": [
    [
     "C",
-    "Wait, who IS Player 2?"
+    "A handwritten note?"
    ],
    [
     "D",
-    "Flip the card. Stats don't lie. 😉"
+    "Old-fashioned. Like a good book. 📜"
    ]
   ]
  },
@@ -2956,6 +2968,41 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('click', e => { const c = e.target.closest('.pc'); if (c) c.classList.toggle('flipped'); });
   if (/[?&]flip/.test(location.search)) setTimeout(() => document.querySelectorAll('.pc').forEach(c => { c.style.transition = 'none'; c.classList.add('flipped'); }), 300);
   document.addEventListener('keydown', e => { const c = e.target.closest?.('.pc'); if (c && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); c.classList.toggle('flipped'); } });
+</script>
+<canvas id="ncSky" aria-hidden="true"></canvas>
+<script>
+(() => {
+  const cv = document.getElementById('ncSky'), g = cv.getContext('2d');
+  let W = 0, H = 0, stars = [], shoot = null, dpr = Math.min(2, window.devicePixelRatio || 1);
+  const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function size() {
+    W = innerWidth; H = innerHeight; cv.width = W * dpr; cv.height = H * dpr; g.setTransform(dpr, 0, 0, dpr, 0, 0);
+    stars = Array.from({ length: Math.round(W * H / 5200) }, () => ({ x: Math.random() * W, y: Math.random() * H, r: Math.random() * 1.3 + .2, p: Math.random() * 6.28, s: .4 + Math.random() * 1.6, gold: Math.random() < .14 }));
+  }
+  size(); addEventListener('resize', size);
+  function frame(now) {
+    const t = now / 1000;
+    g.clearRect(0, 0, W, H);
+    for (const st of stars) {
+      const a = still ? .7 : .35 + .65 * (0.5 + 0.5 * Math.sin(t * st.s + st.p));
+      g.globalAlpha = a; g.fillStyle = st.gold ? '#f7d98a' : '#ffffff';
+      g.beginPath(); g.arc(st.x, st.y, st.r, 0, 6.283); g.fill();
+      if (st.r > 1.25 && a > .85) { g.globalAlpha = a * .5; g.fillRect(st.x - 4, st.y - .25, 8, .5); g.fillRect(st.x - .25, st.y - 4, .5, 8); }
+    }
+    g.globalAlpha = 1;
+    if (!still) {
+      if (!shoot && Math.random() < .004) shoot = { x: Math.random() * W * .7 + W * .2, y: Math.random() * H * .35, t: 0 };
+      if (shoot) {
+        shoot.t += .016; const u = shoot.t / .9, x = shoot.x - u * 260, y = shoot.y + u * 120;
+        const gr = g.createLinearGradient(x, y, x + 90, y - 42); gr.addColorStop(0, 'rgba(255,244,214,.95)'); gr.addColorStop(1, 'rgba(255,244,214,0)');
+        g.strokeStyle = gr; g.lineWidth = 1.6; g.beginPath(); g.moveTo(x, y); g.lineTo(x + 90, y - 42); g.stroke();
+        if (u >= 1) shoot = null;
+      }
+    }
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
 </script>
 </body>
 </html>
