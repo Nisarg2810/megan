@@ -940,6 +940,7 @@
       text-shadow: 4px 4px 0 #7C3AED, 8px 8px 0 #171330; animation: pxPop .7s .3s cubic-bezier(.3,1.6,.5,1) both; }
     @keyframes pxPop { from { opacity: 0; transform: scale(.6) translateY(20px); } }
     .px-sub { margin-top: 22px; font: 400 clamp(11px, 1.5vw, 15px)/1.6 var(--pixel); color: #e2defd; animation: pxUp .8s .8s both; }
+    .px-line { max-width: 660px; margin: 22px auto 0; font: 500 clamp(16px, 1.8vw, 19px)/1.6 "Inter", sans-serif; color: #d9d2f5; text-wrap: balance; animation: pxUp .8s 1s both; }
     .px-caret { color: #FFBD00; animation: pxBlink 1s steps(1) infinite; }
     @keyframes pxBlink { 50% { opacity: 0; } }
     @keyframes pxUp { from { opacity: 0; transform: translateY(14px); } }
@@ -983,8 +984,9 @@
       <div class="px-kicker"><span>For Megan</span><i></i><img src="logo-light.svg" alt="Foundation"><i></i><span>from Nisarg</span></div>
       <h1 class="px-title">HI MEGAN!</h1>
       <p class="px-sub">Player 2 has entered. <span class="px-caret">▌</span></p>
+      <p class="px-line">Not just autonomy, but the trust to operate with an owner’s mindset. A genuine win-win: when Foundation grows because of my work, I grow with it.</p>
       <div class="hero-stage"><canvas id="heroStage" width="240" height="80" role="img" aria-label="Pixel scene: you throw darts at a target while I jump to hit question blocks that pop out posts, threads, shorts and more, then we high-five."></canvas></div>
-      <div class="px-cta"><a class="px-btn" href="#play">▶ PLAY THE STORY</a><a class="px-btn ghost" href="#note">✉ READ THE NOTE</a></div>
+      <div class="px-cta"><a class="px-btn" href="#play">▶ PLAY THE STORY</a><a class="px-btn ghost" href="#play-game" onclick="document.getElementById('playFab').click(); return false;">🎮 PLAY THE GAME</a></div>
     </div>
   </section>
 
@@ -2830,29 +2832,6 @@ document.addEventListener('DOMContentLoaded', () => {
  },
  "sections": [
   {
-   "id": "note",
-   "short": "A note",
-   "title": "A note",
-   "intro": "",
-   "layout": "stack",
-   "items": [
-    {
-     "type": "note",
-     "head": "Before our meeting",
-     "hi": "Megan,",
-     "lines": [
-      "You’ve already seen the plan, so no slides this time. Just a note.",
-      "Here’s who I want to be at Foundation: the outlier. The one who picks up a significant share of the load, and keeps it.",
-      "I’ll bring 20× the value, with an owner’s mindset: entrepreneurial, high agency, mission-aligned, and allergic to “not my job.”",
-      "My loop is simple: learn, execute, iterate, as fast as anyone out there. Intentional curiosity keeps it smart. Getting it done keeps it real.",
-      "So hand me the heavy stuff. You’ll feel the difference in week one."
-     ],
-     "sign": "Nisarg",
-     "ps": "P.S. Play the game. You can’t lose, Player 2 has you."
-    }
-   ]
-  },
-  {
    "id": "contact-section",
    "short": "Let's talk",
    "title": "The epilogue.",
@@ -2877,14 +2856,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }
  ],
  "cameos": {
-  "note": [
+  "contact-section": [
    [
     "C",
-    "A handwritten note?"
+    "That was fun!"
    ],
    [
     "D",
-    "Old-fashioned, on purpose. 📜"
+    "Player 2 is ready when you are. 🎮"
    ]
   ]
  },
