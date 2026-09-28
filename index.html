@@ -7,7 +7,7 @@
   <meta name="description" content="For Megan at Foundation, from Nisarg Mehta: an 8-bit story, a playable level, and the next chapter of the Foundation plan.">
   <meta name="robots" content="noindex, nofollow">
   <meta property="og:title" content="Nisarg × Megan">
-  <meta property="og:description" content="Go read. I got this. The next chapter of the Foundation plan, for Megan.">
+  <meta property="og:description" content="Player 2 has entered. For Megan, from Nisarg.">
   <meta property="og:image" content="https://nisarg2810.github.io/megan/nisarg-avatar.jpg">
   <link rel="icon" href="avatar.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -929,6 +929,34 @@
       box-shadow: 0 0 0 4px rgba(107,31,53,.55), 0 10px 20px rgba(0,0,0,.45), inset 0 -4px 8px rgba(0,0,0,.35); transform: scale(0) rotate(-40deg); transition: transform .6s cubic-bezier(.3,1.6,.5,1); transition-delay: 6.2s; }
     .reveal.in .nt-seal, .show-all .nt-seal { transform: scale(1) rotate(-8deg); }
     @media (prefers-reduced-motion: reduce) { .nt-paper, .nt-ink, .nt-seal { transition: none !important; } .nc-kicker, .nc-title, .nc-sub, .nc-cta, .nc-orn, .nc-orn g { animation: none !important; stroke-dashoffset: 0; } }
+
+    /* ---- plain, game-first look ---- */
+    body { background: radial-gradient(120% 70% at 50% 0%, #2b2a6b 0%, #171330 45%, #0b0a1c 100%) fixed !important; }
+    .px-hero { position: relative; min-height: min(820px, 100vh); display: grid; place-items: center; text-align: center; padding: 70px 0 60px; }
+    .px-kicker { display: inline-flex; align-items: center; gap: 12px; font: 600 12px "Inter", sans-serif; letter-spacing: .22em; text-transform: uppercase; color: #b9b0f5; animation: pxUp .8s .1s both; }
+    .px-kicker i { width: 34px; height: 2px; background: #FFBD00; }
+    .px-kicker img { height: 13px; }
+    .px-title { margin-top: 26px; font: 400 clamp(34px, 7.4vw, 88px)/1.1 var(--pixel); color: #FFE14D; letter-spacing: .02em;
+      text-shadow: 4px 4px 0 #7C3AED, 8px 8px 0 #171330; animation: pxPop .7s .3s cubic-bezier(.3,1.6,.5,1) both; }
+    @keyframes pxPop { from { opacity: 0; transform: scale(.6) translateY(20px); } }
+    .px-sub { margin-top: 22px; font: 400 clamp(11px, 1.5vw, 15px)/1.6 var(--pixel); color: #e2defd; animation: pxUp .8s .8s both; }
+    .px-caret { color: #FFBD00; animation: pxBlink 1s steps(1) infinite; }
+    @keyframes pxBlink { 50% { opacity: 0; } }
+    @keyframes pxUp { from { opacity: 0; transform: translateY(14px); } }
+    .px-hero .hero-stage { display: block !important; margin: 34px auto 0; max-width: 900px; border-radius: 14px; overflow: hidden; background: linear-gradient(180deg, #8fb4ff, #cfe0ff) !important; box-shadow: 0 0 0 4px #FFBD00, 0 0 0 8px #171330, 0 30px 80px -30px rgba(0,0,0,.8); animation: pxUp .9s 1s both; }
+    .px-cta { margin-top: 34px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; animation: pxUp .8s 1.3s both; }
+    .px-btn { font: 400 12px var(--pixel); color: #171330; background: #FFBD00; text-decoration: none; padding: 16px 20px; border-radius: 10px; box-shadow: 0 5px 0 #b37d00, 0 12px 30px -10px rgba(255,189,0,.6); transition: transform .12s, box-shadow .12s; }
+    .px-btn:hover { transform: translateY(-2px); } .px-btn:active { transform: translateY(3px); box-shadow: 0 2px 0 #b37d00; }
+    .px-btn.ghost { background: rgba(255,255,255,.06); color: #FFE14D; box-shadow: 0 0 0 2px #FFBD00 inset; }
+    .game h2, .world-head h2, .contact h2 { font: 800 clamp(28px, 4vw, 46px)/1.15 "Inter", sans-serif !important; letter-spacing: -.02em !important; text-transform: none !important; color: #fff !important; text-shadow: none !important; }
+    .game .eyebrow { font: 400 11px var(--pixel) !important; letter-spacing: 0 !important; color: #FFBD00 !important; }
+    .world-head::after { content: none !important; }
+    .contact p { font: 500 18px "Inter", sans-serif !important; font-style: normal !important; color: #cfc8ef !important; }
+    .contact .btn { font: 400 11px var(--pixel) !important; letter-spacing: 0 !important; text-transform: none !important; border-radius: 10px !important; background: #FFBD00 !important; color: #171330 !important; box-shadow: 0 5px 0 #b37d00 !important; }
+    .contact .btn.ghost { background: rgba(255,255,255,.06) !important; color: #FFE14D !important; box-shadow: 0 0 0 2px #FFBD00 inset !important; }
+    .nt-head { font-family: var(--pixel) !important; font-size: 9px !important; letter-spacing: .08em !important; color: #7C3AED !important; }
+    .nt-seal { font-family: var(--pixel) !important; font-size: 20px !important; background: radial-gradient(circle at 35% 30%, #8b5cf6, #4B3FE0 60%, #2d2598) !important; box-shadow: 0 0 0 4px rgba(75,63,224,.45), 0 10px 20px rgba(0,0,0,.45) !important; color: #FFE14D !important; }
+    .nt-c { border-color: #7C3AED !important; } .nt-paper::before { border-color: rgba(124,58,237,.35) !important; }
   </style>
 </head>
 <body>
@@ -937,7 +965,7 @@
   <div class="intro" id="intro" aria-label="Intro animation">
     <div id="introStage"></div>
     <div class="intro-ui">
-      <button id="introSound" type="button">♪ TAP FOR SOUND</button>
+      <button id="introSound" type="button" class="on">♪ SOUND ON</button>
       <button id="introSkip" type="button">SKIP ▸</button>
     </div>
   </div>
@@ -949,20 +977,14 @@
     <div class="lb-right" id="lbWorld">WORLD 1-1</div>
   </nav>
 
-  <!-- Hero: a night-court sky -->
-  <section class="nc-hero" id="top">
-    <svg class="nc-mtn" viewBox="0 0 1440 300" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="ncM1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a3f94"/><stop offset="1" stop-color="#231c52"/></linearGradient></defs>
-      <path d="M0 300 V190 L90 150 L170 175 L290 80 L380 150 L470 118 L590 190 L720 95 L820 160 L930 72 L1050 170 L1170 118 L1290 165 L1380 110 L1440 130 V300Z" fill="url(#ncM1)"/>
-      <path d="M290 80 L305 100 L292 96 L280 104Z M720 95 L736 116 L722 111 L708 118Z M930 72 L947 95 L932 90 L918 98Z" fill="#e6e0ff" opacity=".8"/>
-      <path d="M0 300 V235 L150 188 L280 232 L410 180 L560 236 L700 196 L850 240 L1000 190 L1150 236 L1300 200 L1440 228 V300Z" fill="#140f30"/>
-      <g class="nc-lights" fill="#f7d98a"><rect x="612" y="262" width="3" height="3" rx="1"/><rect x="640" y="270" width="3" height="3" rx="1"/><rect x="668" y="258" width="3" height="3" rx="1"/><rect x="700" y="272" width="3" height="3" rx="1"/><rect x="731" y="264" width="3" height="3" rx="1"/><rect x="760" y="275" width="3" height="3" rx="1"/><rect x="790" y="262" width="3" height="3" rx="1"/><rect x="820" y="270" width="3" height="3" rx="1"/><rect x="655" y="282" width="3" height="3" rx="1"/><rect x="710" y="284" width="3" height="3" rx="1"/><rect x="772" y="286" width="3" height="3" rx="1"/><rect x="845" y="280" width="3" height="3" rx="1"/><rect x="598" y="280" width="3" height="3" rx="1"/><rect x="880" y="268" width="3" height="3" rx="1"/></g>
-    </svg>
-    <div class="nc-inner wrap">
-      <div class="nc-kicker"><span>For Megan</span><i></i><img src="logo-light.svg" alt="Foundation"><i></i><span>from Nisarg</span></div>
-      <h1 class="nc-title">A Court of<span>Tasks &amp; Time Off</span></h1>
-      <svg class="nc-orn" viewBox="0 0 320 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.2"><path d="M0 12 H122"/><path d="M198 12 H320"/><path d="M122 12 C132 2 142 2 150 12 C142 22 132 22 122 12Z"/><path d="M198 12 C188 2 178 2 170 12 C178 22 188 22 198 12Z"/><path d="M160 2 L166 12 L160 22 L154 12Z" fill="currentColor"/><circle cx="104" cy="12" r="2" fill="currentColor"/><circle cx="216" cy="12" r="2" fill="currentColor"/></g></svg>
-      <p class="nc-sub">You’ve seen the plan. This one’s just for fun, with a note at the end.</p>
-      <div class="nc-cta"><a class="nc-btn" href="#play">▶ Play the story</a><a class="nc-btn ghost" href="#note">✉ Read the note</a></div>
+  <!-- Hero: press start -->
+  <section class="px-hero" id="top">
+    <div class="px-inner wrap">
+      <div class="px-kicker"><span>For Megan</span><i></i><img src="logo-light.svg" alt="Foundation"><i></i><span>from Nisarg</span></div>
+      <h1 class="px-title">HI MEGAN!</h1>
+      <p class="px-sub">Player 2 has entered. <span class="px-caret">▌</span></p>
+      <div class="hero-stage"><canvas id="heroStage" width="240" height="80" role="img" aria-label="Pixel scene: you throw darts at a target while I jump to hit question blocks that pop out posts, threads, shorts and more, then we high-five."></canvas></div>
+      <div class="px-cta"><a class="px-btn" href="#play">▶ PLAY THE STORY</a><a class="px-btn ghost" href="#note">✉ READ THE NOTE</a></div>
     </div>
   </section>
 
@@ -970,12 +992,12 @@
   <section class="game" id="play">
     <div class="wrap">
       <div class="eyebrow">World 1-1 · Foundation</div>
-      <h2>Player 2 has entered the library.</h2>
+      <h2>Player 2 has entered the game.</h2>
       <!-- <p class="lede">A one-minute, 8-bit replay of your week one, now with backup. Turn the sound on for the full effect.</p> -->
       <div class="screen">
         <div class="game-wrap" id="gameWrap">
           <canvas id="game" width="320" height="180" role="img"
-            aria-label="Pixel-art animation: your photo and mine turn into 8-bit characters. In a moonlit library you toss books at a wall of marketing tasks while October 27 gets closer. The tasks keep coming, so I join as Player 2, grab an AI power-up, and together we clear every target so you can go read."></canvas>
+            aria-label="Pixel-art animation: your photo and mine turn into 8-bit characters. You throw darts at a wall of marketing tasks. The tasks keep coming, so I join as Player 2, grab an AI power-up, and together we clear every target."></canvas>
           <canvas id="gameHi" width="1280" height="720" aria-hidden="true"></canvas>
         </div>
         <button class="btn start" id="start" type="button">▶ PRESS START</button>
@@ -1001,7 +1023,7 @@
   <footer>
     <div class="wrap">
       <span>Made for you, Megan, and the Foundation team. Nisarg Mehta</span>
-      <span>Stats are self-reported, and the Foundation plan backs them up. ACOTAR and SJM belong to Sarah J. Maas and her publishers; mentioned here as a fellow reader.</span>
+      <span>Stats are self-reported, and the Foundation plan backs them up. Made with pixels, a little code and a lot of intent.</span>
     </div>
   </footer>
 
@@ -1152,15 +1174,15 @@
     jump: [[11,-4]], wave: [[13,0]], cheer: [[14,-4],[-1,-3]]
   };
 
-  // The template threw axes. Megan tosses books: she is a proud book nerd.
+  // The template threw axes. Megan throws darts at her task targets.
   const AXE = [
     "...........",
-    ".DDDDDDDDDG",
-    ".DWWWWWWWDG",
-    ".DDDDDDDDDG",
+    "FF.........",
+    "FFSSSSSSBBP",
+    "FF.........",
     "...........",
   ];
-  const AXC = { D:'#2c3e8f', W:'#f3e9d2', G:'#e8c26a' };
+  const AXC = { F:'#7C3AED', S:'#d9dde0', B:'#FFBD00', P:'#555a60' };
   function drawAxe(x, y, ang) {
     const c = Math.cos(ang), s = Math.sin(ang);
     for (let yy = -12; yy <= 12; yy++) for (let xx = -12; xx <= 12; xx++) {
@@ -1199,31 +1221,20 @@
   (function buildBG() {
     const b = BG.getContext('2d');
     let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
-    // a moonlit library: floor-to-ceiling shelves, a starry window, warm wooden floor, a rug
-    R(0, 0, W, 48, '#2a1c14', b);
-    const SPINE = ['#7a2e3b', '#2c3e8f', '#e8c26a', '#3f6b4f', '#9b5a8a', '#d9788f', '#f3e9d2', '#4b3fe0', '#8a5a33', '#1f5f6b'];
-    for (const sy of [2, 25]) {
-      let x = 22;
-      while (x < W) { if (x > 120 && x < 200) { x = 200; continue; } const w = 3 + Math.floor(rnd() * 4), h = 13 + Math.floor(rnd() * 7); R(x, sy + 21 - h, w, h, SPINE[Math.floor(rnd() * SPINE.length)], b); R(x, sy + 21 - h, w, 1, 'rgba(255,255,255,.22)', b); if (rnd() < .3) R(x, sy + 21 - h + 4, w, 1, '#e8c26a', b); x += w + (rnd() < .12 ? 3 : 0); }
-      R(0, sy + 21, W, 2, '#4a3222', b);
-    }
-    // the window behind the sign: night sky, stars, a crescent moon
-    R(120, 0, 80, 48, '#141a3a', b); R(120, 0, 2, 48, '#4a3222', b); R(198, 0, 2, 48, '#4a3222', b); R(159, 0, 2, 48, '#4a3222', b);
-    for (let i = 0; i < 46; i++) R(122 + Math.floor(rnd() * 76), 1 + Math.floor(rnd() * 44), 1, 1, rnd() < .3 ? '#e8c26a' : '#ffffff', b);
-    for (let y = -6; y <= 6; y++) { const w = Math.round(Math.sqrt(36 - y * y)); R(186 - w, 11 + y, w * 2 + 1, 1, '#f3e9d2', b); }
-    for (let y = -6; y <= 6; y++) { const w = Math.round(Math.sqrt(36 - y * y)); R(189 - w, 9 + y, w * 2 + 1, 1, '#141a3a', b); }
-    R(0, 46, W, 3, '#1c120c', b);
-    R(0, 49, W, 97, '#6b4a36', b);
-    for (let y = 52; y < 146; y += 6) R(0, y, W, 1, '#5a3d2c', b);
-    for (let i = 0; i < 700; i++) R(Math.floor(rnd() * W), 49 + Math.floor(rnd() * 97), 1 + Math.floor(rnd() * 3), 1, rnd() < .5 ? '#7a5540' : '#5f4231', b);
-    R(28, 104, 160, 38, '#6a2533', b); R(31, 107, 154, 32, '#8f3a48', b);
-    for (let x = 34; x < 184; x += 6) { R(x, 108, 2, 1, '#e8c26a', b); R(x, 137, 2, 1, '#e8c26a', b); }
-    // a leaning tower of to-be-read books and a candle
-    for (let k = 0; k < 7; k++) R(2 + (k % 2), 140 - k * 5, 14 - (k % 3), 5, SPINE[(k * 3) % SPINE.length], b);
-    R(20, 128, 3, 12, '#f3e9d2', b); R(21, 125, 1, 3, '#ffd35a', b); R(18, 140, 7, 2, '#8a5a33', b);
-    R(0, 146, W, 34, '#1b1426', b); R(0, 146, W, 1, '#0f0b16', b);
-    for (let x = 0; x < W; x += 24) R(x, 147, 1, 33, '#150f1e', b);
-    for (let i = 0; i < 34; i++) R(122 - Math.round(i * 0.45), 146 + i, 3, 1, '#e8c26a', b);
+    for (let x = 0; x < W; x += 12) { R(x, 0, 12, 48, (x / 12) % 2 ? '#7a4a2b' : '#6c4127', b); R(x, 0, 1, 48, '#4a2a18', b); }
+    for (let i = 0; i < 140; i++) R(Math.floor(rnd() * W), Math.floor(rnd() * 46), 1, 2 + Math.floor(rnd() * 5), 'rgba(40,20,10,.35)', b);
+    R(0, 46, W, 3, '#3a2415', b);
+    R(0, 49, W, 97, '#d6aa68', b);
+    const osb = ['#c9985a', '#e6c088', '#b98a4f', '#dcb57a', '#a97a44'];
+    for (let i = 0; i < 1500; i++) R(Math.floor(rnd() * W), 49 + Math.floor(rnd() * 97), 1 + Math.floor(rnd() * 3), 1 + Math.floor(rnd() * 2), osb[Math.floor(rnd() * osb.length)], b);
+    for (const x of [106, 196]) R(x, 49, 1, 97, '#9c7040', b);
+    for (const y of [104, 138]) R(22, y, W, 1, 'rgba(40,28,18,.5)', b);
+    R(0, 49, 16, 97, '#e3a15c', b);
+    for (let y = 52; y < 146; y += 4) for (let x = 2; x < 16; x += 4) R(x, y, 1, 1, '#a8672c', b);
+    R(16, 0, 5, 146, '#2e3446', b);
+    R(0, 146, W, 34, '#24262c', b); R(0, 146, W, 1, '#15161a', b);
+    for (let x = 0; x < W; x += 24) R(x, 147, 1, 33, '#1c1d22', b);
+    for (let i = 0; i < 34; i++) R(122 - Math.round(i * 0.45), 146 + i, 3, 1, '#d8423a', b);
     // clipboard scoreboard
     R(150, 84, 16, 20, '#8a5a2e', b); R(152, 87, 12, 16, '#fbfbf6', b); R(155, 83, 6, 3, '#555', b);
     for (let y = 90; y < 102; y += 3) R(154, y, 8, 1, '#b9c2cc', b);
@@ -1281,9 +1292,9 @@
     const on = !(Math.floor(t * 10) % 41 === 0 || Math.floor(t * 10) % 41 === 2);
     R(128, 20, 64, 1, COL.blue); R(128, 44, 64, 1, COL.blue); R(128, 20, 1, 25, COL.blue); R(191, 20, 1, 25, COL.blue);
     R(129, 21, 62, 23, '#171330');
-    if (on) { text('OCT 27', 161, 25, 'rgba(232,194,106,.45)', 2, 'c'); text('OCT 27', 159, 23, 'rgba(232,194,106,.45)', 2, 'c'); }
-    text('OCT 27', 160, 24, on ? '#f7d98a' : '#4a3a1a', 2, 'c');
-    text('NEW SJM BOOK', 160, 37, on ? '#d9788f' : '#4a3a1a', 1, 'c');
+    if (on) { text('FOUNDATION', 161, 26, 'rgba(124,58,237,.5)', 1, 'c'); text('FOUNDATION', 159, 24, 'rgba(124,58,237,.5)', 1, 'c'); }
+    text('FOUNDATION', 160, 25, on ? '#c9bcff' : '#2b2766', 1, 'c');
+    text('PLAYER 2', 160, 35, on ? '#FFBD00' : '#2b2766', 1, 'c');
   }
 
   function bell(t) {
@@ -1419,7 +1430,7 @@
     drawActor(PAL.C, 124, -24, 'stand', false, t);
     text('* 1', 162, 92, '#ffffff', 2);
     text('MARKETING DIRECTOR: MEGAN', 160, 136, '#cfd8de', 1, 'c');
-    text('OCT 27 IS COMING.', 160, 150, '#d9788f', 1, 'c');
+    text('ONE DIRECTOR. MANY TASKS.', 160, 150, '#b9b0f5', 1, 'c');
   }
 
   function lane(t) {
@@ -1448,14 +1459,14 @@
     for (const th of THROWS) coinPop(SLOTS[th.slot][0], SLOTS[th.slot][1], th.hit, t);
 
     if (t >= REFILL && t < REFILL + 1.1 && Math.floor(t * 10) % 3) stext('+2 TASKS!', 240, 56, '#ff6b5e', 1, 'c');
-    if (t >= 8.0 && t < 10.6) bubble(HOME.C + 30, 64, ['SO MANY TASKS...', 'AND OCT 27 IS COMING!'], HOME.C + 18, 88);
+    if (t >= 8.0 && t < 10.6) bubble(HOME.C + 30, 64, ['SO MANY TASKS...', 'I NEED A PLAYER 2!'], HOME.C + 18, 88);
     if (t >= JOIN && t < JOIN + 1.1) {
       if (t < JOIN + 0.08) R(0, 0, W, H, '#ffffff');
       R(0, 54, W, 20, 'rgba(0,38,62,.9)');
       text('PLAYER 2 HAS JOINED!', 160, 59, Math.floor(t * 8) % 2 ? '#FFE14D' : '#ffffff', 2, 'c');
     }
     if (t >= AI_T && t < AI_T + 1.2) stext('AI POWER-UP!', 59, 70, '#FFE14D', 1, 'c');
-    if (t >= 14.0 && t < 16.1) bubble(HOME.D + 20, 64, ["HI MEGAN! I'M NISARG.", "GO READ. I GOT THIS."], HOME.D + 16, 88);
+    if (t >= 14.0 && t < 16.1) bubble(HOME.D + 20, 64, ["HI MEGAN! I'M NISARG.", "I GOT THIS. LET'S GO!"], HOME.D + 16, 88);
     if (t >= BELL + 0.2) {
       stext('COURSE CLEAR!', 112, 62, Math.floor(t * 6) % 2 ? '#ffffff' : '#ffd35a', 2, 'c');
       firework(90, 40, BELL + 0.3, t); firework(150, 30, BELL + 0.7, t); firework(60, 70, BELL + 1.1, t); firework(130, 80, BELL + 1.5, t);
@@ -1464,7 +1475,7 @@
   }
 
   function dialog(t) {
-    const lines = ['THANK YOU MEGAN!', '', 'BUT YOUR MARKETER IS NOT', 'IN ANOTHER COURT.', '', "HE'S RIGHT HERE."];
+    const lines = ['THANK YOU MEGAN!', '', 'BUT YOUR MARKETER IS NOT', 'IN ANOTHER CASTLE.', '', "HE'S RIGHT HERE."];
     R(30, 40, 260, 100, '#000'); R(32, 42, 256, 96, '#ffffff'); R(34, 44, 252, 92, '#000');
     let n = Math.floor((t - DLG - 0.2) * 28);
     lines.forEach((l, i) => {
@@ -1476,8 +1487,8 @@
 
   function endCard(t) {
     R(0, 0, W, H, '#000');
-    text('PTO APPROVED.', 160, 22, '#ffffff', 3, 'c');
-    text('HAPPY READING!', 160, 44, '#FFE14D', 3, 'c');
+    text('TASKS DOWN.', 160, 22, '#ffffff', 3, 'c');
+    text("LET'S GO!", 160, 44, '#FFE14D', 3, 'c');
     const hop = k => -Math.abs(Math.sin(t * 5 + k)) * 4;
     drawActor(PAL.C, 128, -16 + hop(0), 'cheer', false, t);
     drawActor(PAL.D, 166, -16 + hop(1), 'cheer', false, t);
@@ -1495,7 +1506,7 @@
     qblock(0);
     R(0, 0, W, H, 'rgba(0,20,34,.62)');
     text('PLAYER 2: READY?', 160, 46, '#ffffff', 2, 'c');
-    text('A LIBRARY LEVEL FOR MEGAN', 160, 66, '#FFE14D', 1, 'c');
+    text('A LEVEL FOR MEGAN', 160, 66, '#FFE14D', 1, 'c');
   }
 
   function renderGame(t) {
@@ -1581,7 +1592,7 @@
   /* ---------- sound ---------- */
   let AC = null, muted = false;
   function tone(f, dur, type = 'square', vol = 0.05, when = 0, slide = null) {
-    if (!AC || muted || !f) return;
+    if (!AC || muted || !f || AC.state !== 'running') return;
     const t0 = AC.currentTime + when, o = AC.createOscillator(), gn = AC.createGain();
     o.type = type; o.frequency.setValueAtTime(f, t0);
     if (slide) o.frequency.exponentialRampToValueAtTime(slide, t0 + dur);
@@ -1589,7 +1600,7 @@
     o.connect(gn).connect(AC.destination); o.start(t0); o.stop(t0 + dur + 0.02);
   }
   function noise(dur, vol = 0.08, freq = 1200, type = 'bandpass', when = 0) {
-    if (!AC || muted) return;
+    if (!AC || muted || AC.state !== 'running') return;
     const t0 = AC.currentTime + when, len = Math.floor(AC.sampleRate * dur);
     const buf = AC.createBuffer(1, len, AC.sampleRate), d = buf.getChannelData(0);
     for (let i = 0; i < len; i++) d[i] = Math.random() * 2 - 1;
@@ -1650,6 +1661,7 @@
     startBtn.hidden = true;
   }
   startBtn.addEventListener('click', play);
+  ['pointerdown', 'keydown', 'touchstart'].forEach(ev => addEventListener(ev, () => { if (!muted && window.__soundPref !== false) audioOn(); }, { passive: true }));
   replayBtn.addEventListener('click', play);
   function setMuted(m) {
     muted = m;
@@ -1683,10 +1695,10 @@
     introOpen = true;
     document.body.classList.add('intro-open');
     document.getElementById('introStage').appendChild(gameWrap);
-    setMuted(true);
+    setMuted(window.__soundPref === false); introSound.textContent = muted ? '♪ SOUND OFF' : '♪ SOUND ON'; introSound.classList.toggle('on', !muted); if (!muted) audioOn();
     t = 0; prev = -0.001; playing = true; started = true; startBtn.hidden = true;
-    introSound.addEventListener('click', e => { e.stopPropagation(); soundOn(); });
-    cv.addEventListener('click', () => { if (introOpen) soundOn(); });
+    introSound.addEventListener('click', e => { e.stopPropagation(); if (muted) { window.__soundPref = true; soundOn(); } else { window.__soundPref = false; setMuted(true); introSound.textContent = '♪ SOUND OFF'; introSound.classList.remove('on'); } });
+    cv.addEventListener('click', () => { if (introOpen && !muted) audioOn(); });
     document.getElementById('introSkip').addEventListener('click', closeIntro);
     addEventListener('keydown', e => { if (introOpen && (e.key === 'Escape' || e.key === 'Enter')) closeIntro(); });
   }
@@ -2504,7 +2516,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <div class="mg" id="mini" role="dialog" aria-modal="true" aria-label="Mini game: play as Megan" hidden>
   <div class="mg-box">
-    <div class="mg-top"><span class="mg-title">WORLD 1-2 · THE ROAD TO OCT 27</span><button class="mg-x" id="miniClose" type="button">✕ Back to site</button></div>
+    <div class="mg-top"><span class="mg-title">WORLD 1-2 · FOUNDATION HQ</span><button class="mg-x" id="miniClose" type="button">✕ Back to site</button></div>
     <div class="mg-screen">
       <canvas id="miniCv" width="320" height="180" aria-label="Side-scrolling game: Megan runs, jumps and stomps task monsters on the way to a flag"></canvas>
       <div class="mg-pop" id="miniPop"></div>
@@ -2743,13 +2755,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const card = html => { pop.innerHTML = `<div class="mg-card">${html}</div>`; pop.hidden = false; };
   function showStart() {
     S.playing = false;
-    card(`<img src="nisarg-avatar.jpg" alt=""><h3>READY, MEGAN?</h3><p>You're the main character, and <b>I've got you.</b> Run to the flag, I'll handle the tasks. You have a book to get to. Let's win this together!</p><div class="row"><button class="go" data-a="coop">▶ LET'S GO, TOGETHER</button><button data-a="close">Back to site</button></div>`);
+    card(`<img src="nisarg-avatar.jpg" alt=""><h3>READY, MEGAN?</h3><p>You're the main character, and <b>I've got you.</b> Run to the flag, I'll handle the tasks. Let's win this together!</p><div class="row"><button class="go" data-a="coop">▶ LET'S GO, TOGETHER</button><button data-a="close">Back to site</button></div>`);
   }
   function showLose() {
     card(`<img src="nisarg-avatar.jpg" alt=""><h3>OH NO! 😅</h3><p>Don't worry, <b>I got you.</b><br>I'm with you. <b>Let's win together!</b></p><div class="row"><button class="go" data-a="coop">▶ PLAY WITH PLAYER 2</button><button data-a="close">Back to site</button></div>`);
   }
   function showWin() {
-    card(`<img src="nisarg-avatar.jpg" alt=""><h3>WE DID IT! 🎉</h3><p>See? <b>Better together.</b> Now go read. 📚 Then let's do it for real at Foundation.</p><div class="row"><button class="blue" data-a="chat">📘 OPEN THE FOUNDATION PLAN</button><button class="go" data-a="coop">↺ AGAIN</button><button data-a="close">Back to site</button></div>`);
+    card(`<img src="nisarg-avatar.jpg" alt=""><h3>WE DID IT! 🎉</h3><p>See? <b>Better together.</b> Now let's do it for real at Foundation.</p><div class="row"><button class="blue" data-a="chat">📘 OPEN THE FOUNDATION PLAN</button><button class="go" data-a="coop">↺ AGAIN</button><button data-a="close">Back to site</button></div>`);
   }
   pop.addEventListener('click', e => {
     const a = e.target.closest('button')?.dataset.a; if (!a) return;
@@ -2833,10 +2845,10 @@ document.addEventListener('DOMContentLoaded', () => {
       "Here’s who I want to be at Foundation: the outlier. The one who picks up a significant share of the load, and keeps it.",
       "I’ll bring 20× the value, with an owner’s mindset: entrepreneurial, high agency, mission-aligned, and allergic to “not my job.”",
       "My loop is simple: learn, execute, iterate, as fast as anyone out there. Intentional curiosity keeps it smart. Getting it done keeps it real.",
-      "And when October 27 comes, take the whole week. Read the book, cry at the ending. I’ve got the rest."
+      "So hand me the heavy stuff. You’ll feel the difference in week one."
      ],
      "sign": "Nisarg",
-     "ps": "P.S. Tell me your favourite SJM series today. Purely for research."
+     "ps": "P.S. Play the game. You can’t lose, Player 2 has you."
     }
    ]
   },
@@ -2872,17 +2884,17 @@ document.addEventListener('DOMContentLoaded', () => {
    ],
    [
     "D",
-    "Old-fashioned. Like a good book. 📜"
+    "Old-fashioned, on purpose. 📜"
    ]
   ]
  },
  "finale": {
   "line": "Megan! Thanks for playing. Add Player 2 to your party?",
   "yes": "▶ YES, JOIN MY PARTY!",
-  "maybe": "▶ AFTER MY BOOK",
-  "maybeHover": "▶ OK FINE, YES 📚",
+  "maybe": "▶ MAYBE LATER",
+  "maybeHover": "▶ OK FINE, YES",
   "scheduleUrl": "",
-  "placeholderToast": "See you in our meeting today! 📚"
+  "placeholderToast": "See you in our meeting today! 🎮"
  }
 }
 </script>
